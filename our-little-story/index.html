@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070707">
+  <meta name="description" content="Birlikte biriktirdiğimiz anılar için küçük bir dijital hikâye.">
+  <title>Bizim Hikâyemiz ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#story">Hikâyemize geç</a>
+  <header class="site-header" id="top">
+    <a class="wordmark" href="#top" aria-label="Bizim Hikâyemiz, başa dön">bizim <span>hikâyemiz</span> <i>♡</i></a>
+    <span class="header-note">birlikte yazılıyor</span>
+  </header>
+
+  <main>
+    <section class="hero dark-chapter" aria-labelledby="hero-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Bir zamanlar</p>
+          <h1 id="hero-title">Senden<br><em>önce.</em></h1>
+          <p class="hero-subtitle">Her hikâyenin bir öncesi var.<br>Bizimkini biraz aşağıda bulacaksın.</p>
+          <a class="scroll-link" href="#before-us"><span class="scroll-link-line"></span> İlk sayfaya doğru <span aria-hidden="true">↓</span></a>
+        </div>
+        <aside class="hero-note" aria-label="Açılış notu">
+          <span class="note-overline">henüz başlamamış bir hikâye</span>
+          <p id="hero-placeholder"></p>
+          <span class="note-heart" aria-hidden="true">♡</span>
+          <span class="note-index">01 — ∞</span>
+        </aside>
+        <span class="hero-side-label" aria-hidden="true">SENİNLE TANIŞMADAN ÖNCE</span>
+      </div>
+      <div class="hero-bottom"><span>YAVAŞÇA KAYDIR</span><span>01 / 03</span></div>
+    </section>
+
+    <section class="before-us dark-chapter" id="before-us" aria-labelledby="before-title">
+      <header class="before-heading reveal">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Bölüm bir · başlangıçtan önce</p>
+        <h2 id="before-title">Seninle<br><em>tanışmadan önce.</em></h2>
+        <p>Biraz benim eski dünyamdan; biraz da henüz bilmediğim o güzel karşılaşmadan.</p>
+      </header>
+      <div class="prelude-list" id="prelude-slides" aria-label="Senden önceki hikâyem"></div>
+      <div class="chapter-bridge reveal" id="color-door">
+        <span class="bridge-star" aria-hidden="true">✳</span>
+        <p class="eyebrow">Ve sonra, sen.</p>
+        <h2>Renkler<br><em>burada başlıyor.</em></h2>
+        <a href="#story" class="bridge-link">Birlikte yazdığımız hikâyeye <span aria-hidden="true">↘</span></a>
+      </div>
+    </section>
+
+    <section class="story-section" id="story" aria-labelledby="story-title">
+      <div class="story-inner">
+        <div class="story-opening reveal">
+          <div class="story-heading">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> Bölüm iki · biz</p>
+            <h2 id="story-title">Yollarımızın<br><em>kesiştiği gün.</em></h2>
+          </div>
+          <div class="story-aside">
+            <p class="intro-note">Seninle tanıştığım gün, hikâyemizin en sevdiğim sayfası açıldı. İşte birlikte biriktirdiğimiz anılar.</p>
+            <p class="since" id="since-note"></p>
+          </div>
+        </div>
+        <div class="timeline" id="timeline" aria-label="İlişki anıları"></div>
+      </div>
+    </section>
+
+    <section class="ending" id="ending">
+      <div class="ending-inner reveal">
+        <div class="ending-flower" aria-hidden="true">✳</div>
+        <p class="eyebrow">En sevdiğim insana</p>
+        <h2>Ve bu sadece<br><em>başlangıç...</em></h2>
+        <p class="love-letter" id="love-letter"></p>
+        <p class="signature" id="signature"></p>
+        <p class="to-be-continued">Devamı gelecek... <span>♡</span></p>
+      </div>
+      <span class="ending-side-note" aria-hidden="true">BİZİM HİKÂYEMİZ</span>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a href="#top">Başa dön ↑</a><span>Tüm sevgimle yapıldı <i>♡</i></span></footer>
+
+  <dialog class="memory-dialog" id="memory-dialog" aria-labelledby="dialog-title">
+    <button class="close-button" data-close-dialog aria-label="Anıyı kapat">×</button>
+    <div class="dialog-content">
+      <div class="dialog-note"><span class="note-overline">o günden bir not</span><p id="dialog-placeholder"></p><span class="note-heart" aria-hidden="true">♡</span></div>
+      <div class="dialog-copy"><p class="eyebrow" id="dialog-date"></p><h2 id="dialog-title"></h2><p id="dialog-description"></p></div>
+    </div>
+  </dialog>
+</body>
+</html>
