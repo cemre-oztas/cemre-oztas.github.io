@@ -11,6 +11,7 @@
   data.introSlides.forEach((slide, index) => {
     const article = document.createElement('article');
     article.className = `prelude-slide reveal ${index % 2 ? 'slide-offset' : ''}`;
+    article.style.setProperty('--reveal-delay', `${Math.min(index * 110, 330)}ms`);
     article.innerHTML = `<div class="slide-rail"><span class="slide-index">0${index + 1}</span><span class="slide-line"></span></div><div class="prelude-copy"><p class="eyebrow">${escapeHtml(slide.kicker)}</p><h3>${escapeHtml(slide.title)}</h3><p>${escapeHtml(slide.text)}</p></div><span class="slide-ghost" aria-hidden="true">0${index + 1}</span>`;
     prelude.append(article);
   });
@@ -25,7 +26,8 @@
     const article = document.createElement('article');
     article.dataset.memoryIndex = index;
     article.className = `timeline-entry reveal ${index % 2 ? 'from-right' : 'from-left'}`;
-    article.innerHTML = `<div class="timeline-marker" aria-hidden="true"><span>0${index + 1}</span><i></i></div><div class="memory-card"><div class="memory-card-top"><span class="memory-date">${escapeHtml(memory.date)}</span><span class="memory-heart" aria-hidden="true">♡</span></div><div class="memory-card-content"><div class="memory-note"><span class="note-overline">${escapeHtml(memory.label || 'o günden bir not')}</span><p>${escapeHtml(memory.photoText)}</p></div><div class="memory-copy"><h3>${escapeHtml(memory.title)}</h3><p>${escapeHtml(memory.shortDescription || memory.description)}</p><button class="text-button" type="button" data-memory="${index}">Bu anıyı yeniden oku <span aria-hidden="true">↗</span></button></div></div></div>`;
+    article.style.setProperty('--reveal-delay', `${Math.min(index * 100, 300)}ms`);
+    article.innerHTML = `<div class="timeline-marker" aria-hidden="true"><span>0${index + 1}</span><i></i></div><div class="memory-card"><div class="memory-card-top"><span class="memory-date">${escapeHtml(memory.date)}</span><span class="memory-heart" aria-hidden="true">♡</span></div><div class="memory-card-content"><div class="memory-note"><span class="note-overline">${escapeHtml(memory.label || 'o günden bir not')}</span><p>${escapeHtml(memory.photoText)}</p></div><div class="memory-copy"><h3>${escapeHtml(memory.title)}</h3><p>${escapeHtml(memory.shortDescription || memory.description)}</p><button class="text-button" type="button" data-memory="${index}" aria-label="Bana tıkla, beni oku: ${escapeHtml(memory.title)}">BANA TIKLA, BENİ OKU <span aria-hidden="true">↗</span></button></div></div></div>`;
     timeline.append(article);
   });
 
@@ -68,3 +70,4 @@
     document.querySelectorAll('.reveal').forEach(element => element.classList.add('is-visible'));
   }
 })();
+
